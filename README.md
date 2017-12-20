@@ -10,7 +10,3 @@ python3.6 -V
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-039a358c0fe642f091a2ececd6155f74
-
-
-
