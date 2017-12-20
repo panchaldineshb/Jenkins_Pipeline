@@ -1,0 +1,31 @@
+<project name="hello_world" default="main" basedir=".">
+
+	<property name="src.dir"     value="${basedir}/src"/>
+	<property name="build.dir"   value="${basedir}/build"/>
+
+    <target name="clean">
+
+		<delete verbose="true" includeemptydirs="true">        
+			<fileset dir="${build.dir}" defaultexcludes="no">
+				<include name ="**/*"/>
+			</fileset>
+		</delete> 
+
+    </target>
+
+    <target name="build">
+
+        <!-- create build directory -->
+        <mkdir dir="${build.dir}" />
+
+	</target>
+
+    <target name="run">
+		<exec executable="/opt/python">
+			<arg value="${src.dir}/hello_world.py" />
+		</exec>
+    </target>
+
+	<target name="main" depends="clean, build, run"/>
+
+</project>
