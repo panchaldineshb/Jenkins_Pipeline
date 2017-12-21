@@ -1,11 +1,3 @@
-# Project dependencies to install
-
-You can save the output above in a file. This is good practice because anyone who wants to work on or run your project will need to know the dependencies to install. The following command will save the dependencies in a requirements.txt file:
-
-```
-pip freeze > requirements.md
-```
-
 attrs==15.2.0
 BeautifulSoup==3.2.1
 blinker==1.3
