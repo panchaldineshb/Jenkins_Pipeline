@@ -9,17 +9,17 @@ connection = db.connect("localhost","root","meeN$2402","sarabi" )
 cursor = connection.cursor()
 
 # Drop table if it already exist using execute() method.
-cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
+cursor.execute("drop table if exists platforms")
 
 # Create table as per requirement
-sql = """CREATE TABLE EMPLOYEE (
-    ID INT(11) NOT NULL auto_increment PRIMARY KEY,
-    FIRST_NAME  CHAR(20) NOT NULL,
-    LAST_NAME  CHAR(20),
-    AGE INT,
-    SEX CHAR(1),
-    INCOME FLOAT )"""
-
+sql = """create table platforms (
+    id int unsigned auto_increment not null,
+    name char(20) not null,
+    display_name char(40) not null,
+    description char(60) not null,
+    last_updated timestamp not null default now(),
+    primary key(id)
+    )"""
 cursor.execute(sql)
 
 # disconnect from server
