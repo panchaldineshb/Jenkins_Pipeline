@@ -13,7 +13,8 @@ class DevelopmentConfig(Config):
 
     DEBUG = True
     SQLALCHEMY_ECHO = True
-
+    # disable track modifications
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
     """
