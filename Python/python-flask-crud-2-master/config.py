@@ -16,6 +16,10 @@ class DevelopmentConfig(Config):
     # disable track modifications
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    CSRF_ENABLED = True
+    SECRET_KEY = 'devopsdemo_secret_key'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:meeN$2402@localhost/sarabi'
+
 class ProductionConfig(Config):
     """
     Production configurations
