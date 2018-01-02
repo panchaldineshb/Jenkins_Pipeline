@@ -13,9 +13,11 @@ class DevelopmentConfig(Config):
 
     DEBUG = True
     SQLALCHEMY_ECHO = True
+
     # disable track modifications
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    # added to avoid secret_key error
     CSRF_ENABLED = True
     SECRET_KEY = 'devopsdemo_secret_key'
     SQLALCHEMY_DATABASE_URI = 'mysql://root:meeN$2402@localhost/sarabi'
